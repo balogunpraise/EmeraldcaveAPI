@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emeraldcave.Api", "Emeraldcave.Api\Emeraldcave.Api.csproj", "{F3D8326E-BA1C-4D4C-BD4A-22B4A42B30DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emeraldcave.Api", "Emeraldcave.Api\Emeraldcave.Api.csproj", "{F3D8326E-BA1C-4D4C-BD4A-22B4A42B30DE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{28B24DED-8676-4745-A547-A1F72AF4B60D}"
 EndProject
@@ -15,13 +15,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{D52A5B6C-D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{6628EFD3-D5D6-4CD6-950B-E0862AF6D5E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emeraldcave.Domain", "Emeraldcave.Domain\Emeraldcave.Domain.csproj", "{364BD4E2-F832-4F6F-8E0A-9CEBC9B8130A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emeraldcave.Domain", "Emeraldcave.Domain\Emeraldcave.Domain.csproj", "{364BD4E2-F832-4F6F-8E0A-9CEBC9B8130A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emeraldcave.Application", "Emeraldcave.Application\Emeraldcave.Application.csproj", "{4904F58B-B1CA-4101-A662-0D2A882CD9FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emeraldcave.Application", "Emeraldcave.Application\Emeraldcave.Application.csproj", "{4904F58B-B1CA-4101-A662-0D2A882CD9FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emeraldcave.Infrastructure.Identity", "Emeraldcave.Infrastructure.Identity\Emeraldcave.Infrastructure.Identity.csproj", "{E9061003-D48E-4B34-8FFB-F75A85022C15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emeraldcave.Infrastructure.Identity", "Emeraldcave.Infrastructure.Identity\Emeraldcave.Infrastructure.Identity.csproj", "{E9061003-D48E-4B34-8FFB-F75A85022C15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emeraldcave.Infrastructure.Shared", "Emeraldcave.Infrastructure.Shared\Emeraldcave.Infrastructure.Shared.csproj", "{C894E836-97E1-4AF9-9C51-F45512E87F01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emeraldcave.Infrastructure.Shared", "Emeraldcave.Infrastructure.Shared\Emeraldcave.Infrastructure.Shared.csproj", "{C894E836-97E1-4AF9-9C51-F45512E87F01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

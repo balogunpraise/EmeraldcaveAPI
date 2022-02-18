@@ -56,5 +56,21 @@ namespace Emeraldcave.Api.Controllers
             return StatusCode(StatusCodes.Status400BadRequest, new AuthResponseDto { Status = "Error", Message = "User creation failed" });
 
         }
-    }
+
+
+        [HttpPost]
+        public async Task<IActionResult> Login([FromBody] LoginModel model)
+        {
+            var user = await _userManager.FindByEmailAsync(model.Email);
+            if (user == null)
+                return StatusCode(StatusCodes.Status401Unauthorized, new AuthResponseDto { Status = "Bad Request", Message = "Invalid credentials" });
+            var result = _userManager.CheckPasswordAsync(user, model.Password);
+            if (result.IsCompletedSuccessfully)
+            {
+                await _signinManager.SignInAsync(user, false);
+                return StatusCode(StatusCodes.Status200OK, new LoginResponseDto { DisplayName = user.FirstName, Email = user.Email, Token = "Token" });
+            }
+            return StatusCode(StatusCodes.Status401Unauthorized, new AuthResponseDto { Status = "Bad Request", Message = "Invalid credentials" });
+        }
+    } 
 }

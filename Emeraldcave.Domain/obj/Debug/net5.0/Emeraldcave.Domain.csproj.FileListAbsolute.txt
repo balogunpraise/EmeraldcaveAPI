@@ -1,0 +1,15 @@
+C:\Users\David\Desktop\Project\EmeraldCave\Emeraldcave\Emeraldcave.Domain\bin\Debug\net5.0\Emeraldcave.Domain.deps.json
+C:\Users\David\Desktop\Project\EmeraldCave\Emeraldcave\Emeraldcave.Domain\bin\Debug\net5.0\Emeraldcave.Domain.dll
+C:\Users\David\Desktop\Project\EmeraldCave\Emeraldcave\Emeraldcave.Domain\bin\Debug\net5.0\ref\Emeraldcave.Domain.dll
+C:\Users\David\Desktop\Project\EmeraldCave\Emeraldcave\Emeraldcave.Domain\bin\Debug\net5.0\Emeraldcave.Domain.pdb
+C:\Users\David\Desktop\Project\EmeraldCave\Emeraldcave\Emeraldcave.Domain\obj\Debug\net5.0\Emeraldcave.Domain.csproj.AssemblyReference.cache
+C:\Users\David\Desktop\Project\EmeraldCave\Emeraldcave\Emeraldcave.Domain\obj\Debug\net5.0\Emeraldcave.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\David\Desktop\Project\EmeraldCave\Emeraldcave\Emeraldcave.Domain\obj\Debug\net5.0\Emeraldcave.Domain.AssemblyInfoInputs.cache
+C:\Users\David\Desktop\Project\EmeraldCave\Emeraldcave\Emeraldcave.Domain\obj\Debug\net5.0\Emeraldcave.Domain.AssemblyInfo.cs
+C:\Users\David\Desktop\Project\EmeraldCave\Emeraldcave\Emeraldcave.Domain\obj\Debug\net5.0\Emeraldcave.Domain.csproj.CoreCompileInputs.cache
+C:\Users\David\Desktop\Project\EmeraldCave\Emeraldcave\Emeraldcave.Domain\obj\Debug\net5.0\Emeraldcave.Domain.dll
+C:\Users\David\Desktop\Project\EmeraldCave\Emeraldcave\Emeraldcave.Domain\obj\Debug\net5.0\ref\Emeraldcave.Domain.dll
+C:\Users\David\Desktop\Project\EmeraldCave\Emeraldcave\Emeraldcave.Domain\obj\Debug\net5.0\Emeraldcave.Domain.pdb
+C:\Users\David\Desktop\Project\EmeraldCave\Emeraldcave\Emeraldcave.Domain\bin\Debug\net5.0\Emeraldcave.Domain.runtimeconfig.json
+C:\Users\David\Desktop\Project\EmeraldCave\Emeraldcave\Emeraldcave.Domain\bin\Debug\net5.0\Emeraldcave.Domain.runtimeconfig.dev.json
+C:\Users\David\Desktop\Project\EmeraldCave\Emeraldcave\Emeraldcave.Domain\obj\Debug\net5.0\Emeraldcave.Domain.genruntimeconfig.cache

@@ -14,6 +14,7 @@ namespace Emeraldcave.Api.Models.AuthModels
         public string PhoneNumber { get; set; }
         public string AltPhoneNumber { get; set; }
         public string Email { get; set; }
+        public string Username { get; set; }
         public string Password { get; set; }
         public ICollection<AddressDto> Addresses { get; set; }
     }

@@ -1,6 +1,7 @@
 ﻿using Emeraldcave.Api.ApiResponses;
 using Emeraldcave.Api.Models.AuthModels;
 using Emeraldcave.Domain.Entities;
+using Emeraldcave.Domain.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -15,12 +16,14 @@ namespace Emeraldcave.Api.Controllers
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signinManager;
+        private readonly ITokenService _tokenService;
 
 
-        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
+        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, ITokenService tokenService)
         {
             _userManager = userManager;
             _signinManager = signInManager;
+            _tokenService = tokenService;
         }
 
 
@@ -37,6 +40,7 @@ namespace Emeraldcave.Api.Controllers
                 PhoneNumber = model.PhoneNumber,
                 AltPhoneNumber = model.AltPhoneNumber,
                 Email = model.Email,
+                UserName = model.Username,
                 Addresses = model.Addresses.Select(i => 
                 new Address
                 {
@@ -58,17 +62,16 @@ namespace Emeraldcave.Api.Controllers
         }
 
 
-        [HttpPost]
+        [HttpPost("/login")]
         public async Task<IActionResult> Login([FromBody] LoginModel model)
         {
             var user = await _userManager.FindByEmailAsync(model.Email);
             if (user == null)
                 return StatusCode(StatusCodes.Status401Unauthorized, new AuthResponseDto { Status = "Bad Request", Message = "Invalid credentials" });
-            var result = _userManager.CheckPasswordAsync(user, model.Password);
-            if (result.IsCompletedSuccessfully)
-            {
-                await _signinManager.SignInAsync(user, false);
-                return StatusCode(StatusCodes.Status200OK, new LoginResponseDto { DisplayName = user.FirstName, Email = user.Email, Token = "Token" });
+            var result = await _signinManager.CheckPasswordSignInAsync(user, model.Password, false);
+            if (result.Succeeded)
+            { 
+                return StatusCode(StatusCodes.Status200OK, new LoginResponseDto { DisplayName = user.FirstName, Email = user.Email, Token = _tokenService.CreateToken(user) });
             }
             return StatusCode(StatusCodes.Status401Unauthorized, new AuthResponseDto { Status = "Bad Request", Message = "Invalid credentials" });
         }

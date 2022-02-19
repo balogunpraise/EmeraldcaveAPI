@@ -13,6 +13,6 @@ namespace Emeraldcave.Application.Dtos
         public string City { get; set; }
         public string StreetAddress { get; set; }
         public string ZipCode { get; set; }
-        public string AppUserId { get; set; }
+        //public string AppUserId { get; set; }
     }
 }

@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emeraldcave.Infrastructure.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emeraldcave.Infrastructure.Shared", "Emeraldcave.Infrastructure.Shared\Emeraldcave.Infrastructure.Shared.csproj", "{C894E836-97E1-4AF9-9C51-F45512E87F01}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emeraldcave.Infrastructure.Store", "Emeraldcave.Infrastructure.Store\Emeraldcave.Infrastructure.Store.csproj", "{28A7D1A1-A455-4BC7-A566-4150F17AB1F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{C894E836-97E1-4AF9-9C51-F45512E87F01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C894E836-97E1-4AF9-9C51-F45512E87F01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C894E836-97E1-4AF9-9C51-F45512E87F01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28A7D1A1-A455-4BC7-A566-4150F17AB1F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28A7D1A1-A455-4BC7-A566-4150F17AB1F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28A7D1A1-A455-4BC7-A566-4150F17AB1F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28A7D1A1-A455-4BC7-A566-4150F17AB1F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{4904F58B-B1CA-4101-A662-0D2A882CD9FC} = {D52A5B6C-DE47-4390-A48F-799B0AF1AA68}
 		{E9061003-D48E-4B34-8FFB-F75A85022C15} = {6628EFD3-D5D6-4CD6-950B-E0862AF6D5E6}
 		{C894E836-97E1-4AF9-9C51-F45512E87F01} = {6628EFD3-D5D6-4CD6-950B-E0862AF6D5E6}
+		{28A7D1A1-A455-4BC7-A566-4150F17AB1F5} = {6628EFD3-D5D6-4CD6-950B-E0862AF6D5E6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F467926-DD02-4646-8F40-0E393800190A}

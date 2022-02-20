@@ -1,8 +1,7 @@
-﻿using Emeraldcave.Domain.Entities;
+﻿using Emeraldcave.Api.Extensions;
+using Emeraldcave.Domain.Entities;
 using Emeraldcave.Domain.Interfaces;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -31,7 +30,7 @@ namespace Emeraldcave.Api.Controllers
         {
             var result = await _product.GetByIdAsync(id);
             if (result != null)
-                return Ok(result);
+                return Ok(result.AsProductDto());
             return Ok("No item found");
         }
 
@@ -39,7 +38,22 @@ namespace Emeraldcave.Api.Controllers
         public async Task<ActionResult<IReadOnlyList<Product>>> GetAllProductsAsync()
         {
             var result = await _product.GetAllAsync();
-            return Ok(result);
+            return Ok(result.Select(x => x.AsProductDto()));
         }
+
+
+        [HttpGet("/product-brands")]
+        public async Task<ActionResult<IReadOnlyList<ProductBrand>>> GetProductBrandsAsync()
+        {
+            return Ok(await _brand.GetAllAsync());
+        }
+
+        [HttpGet("/product-types")]
+        public async Task<ActionResult<IReadOnlyList<ProductType>>> GetProductTypesAsync()
+        {
+            return Ok(await _type.GetAllAsync());
+        }
+
+
     }
 }

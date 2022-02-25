@@ -1,5 +1,6 @@
 ﻿using Emeraldcave.Domain.Common;
 using Emeraldcave.Domain.Interfaces;
+using Emeraldcave.Domain.Specification;
 using Emeraldcave.Infrastructure.Store.Context;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -26,5 +27,16 @@ namespace Emeraldcave.Infrastructure.Store.Repositories
         {
             return await _context.Set<T>().FindAsync(id);
         }
+
+        public Task<T> GetEntityWithSpec(ISpecification<T> spec)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task<IReadOnlyList<T>> ListAllAsync(ISpecification<T> spec)
+        {
+            throw new System.NotImplementedException();
+        }
+
     }
 }

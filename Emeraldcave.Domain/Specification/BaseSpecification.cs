@@ -10,6 +10,14 @@ namespace Emeraldcave.Domain.Specification
 
         public List<Expression<Func<T, object>>> Includes { get; }
 
+        public BaseSpecification()
+        {
+                
+        }
+        public BaseSpecification(Expression<Func<T, bool>> criteria)
+        {
+            Criteria = criteria;
+        }
 
         protected void AddIncludes (Expression<Func<T, object>> includes)
         {

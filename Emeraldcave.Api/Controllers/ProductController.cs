@@ -1,6 +1,7 @@
 ﻿using Emeraldcave.Api.Extensions;
 using Emeraldcave.Domain.Entities;
 using Emeraldcave.Domain.Interfaces;
+using Emeraldcave.Domain.Specification;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,7 +38,8 @@ namespace Emeraldcave.Api.Controllers
         [HttpGet("/products")]
         public async Task<ActionResult<IReadOnlyList<Product>>> GetAllProductsAsync()
         {
-            var result = await _product.GetAllAsync();
+            var spec = new ProductsWithTypesAndBrandsSpecification();
+            var result = await _product.ListAllAsync(spec);
             return Ok(result.Select(x => x.AsProductDto()));
         }
 

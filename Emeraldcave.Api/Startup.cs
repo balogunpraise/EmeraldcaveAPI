@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using System.Reflection;
 
 namespace Emeraldcave.Api
 {
@@ -26,6 +27,7 @@ namespace Emeraldcave.Api
         {
             services.AddScoped<ITokenService, TokenService>();
             services.AddIdentityServices(Configuration);
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddDbContext<AppUserDbContext>(option =>
                 option.UseSqlite(Configuration.GetConnectionString("IdentityDatabase")));
 
